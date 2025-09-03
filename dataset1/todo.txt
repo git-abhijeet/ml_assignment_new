@@ -1,0 +1,34 @@
+# Titanic Pandas Assignment - TODO List
+
+### Part A — Basic
+- [x] **1. Load & Inspect:** Load `train.csv` into a DataFrame `df`. Show `df.shape`, `df.info()`, and `df.head(5)`.
+- [x] **2. Column summary:** Produce a summary table listing: column name, dtype, # missing, # unique values. Sort it by # missing descending.
+- [x] **3. Value counts & proportions:** For `Pclass`, `Sex`, and `Embarked`, show value counts and percentages (as a DataFrame).
+- [x] **4. Select & filter:** Create a DataFrame `female_firstclass_over_30` containing female passengers in 1st class older than 30. Show the top 10 rows sorted by `Fare` descending.
+- [x] **5. Basic aggregations:** Compute: mean/median/mode of `Age` (ignore missing), mean `Fare` per `Pclass`, survival rate (mean of `Survived`) overall and by `Sex`.
+
+### Part B — Intermediate
+- [x] **6. Missing value imputation:** Impute missing `Age` values using the median age grouped by `Pclass` and `Sex`. Create a new column `Age_imputed`. Show before/after missing counts.
+- [x] **7. Feature extraction from text:** Extract `Title` (e.g., Mr, Mrs, Miss) from the `Name` column into a new column `Title`. Show the counts for each title.
+- [x] **8. Family size & new feature:** Create `FamilySize` = `SibSp` + `Parch` + 1. Create an `IsAlone` boolean column (True if `FamilySize`==1). Show the survival rate by `IsAlone`.
+- [x] **9. Pivot table and multi-index groupby:**
+    - Produce a pivot table showing survival rate indexed by `Pclass` (rows) and `Sex` (columns).
+    - Produce a groupby that shows average `Fare` and `Age_imputed` for `Pclass`, `Embarked`.
+- [x] **10. String cleaning & parsing:** Clean the `Cabin` column: replace missing cabins with 'Unknown'. Extract the cabin letter into `CabinDeck`. Show survival rate by `CabinDeck`.
+
+### Part C — Advanced
+- [x] **11. Advanced joins / merges:** Create a lookup DataFrame with `Ticket` frequency (`TicketCount`). Merge this back into the main DataFrame. Show the top 10 tickets by `TicketCount`.
+- [x] **12. Outlier detection & handling:** Identify passengers with `Fare` in the top 1%. Create a flag column `Fare_outlier` and replace those `Fare` values with the 99th percentile value.
+- [x] **13. Complex aggregation with apply:** Create an `AgeGroup` column (e.g., Child, Teen, Adult). Show the survival rate for each `AgeGroup` by `Sex`.
+- [x] **14. Multi-step pipeline:** Build a small preprocessing pipeline that:
+    - Fills missing `Embarked` with the mode.
+    - Imputes `Age` using the `Pclass`+`Sex` median rule.
+    - Encodes `Sex` to numeric (0/1).
+    - Drops unused columns (`Name`, `Ticket`, `Cabin`).
+    - Outputs the cleaned DataFrame `df_clean`.
+- [x] **15. Challenge analysis / storytelling:** Answer (in markdown + code) the question: “Which combination of features (choose at most 3) seems most associated with survival?”
+
+### Final Deliverables
+- [ ] `titanic_pandas_assignment.ipynb` (complete with all tasks).
+- [ ] `train_cleaned.csv` (exported from the pipeline).
+- [ ] `README.md` (short description of your approach).
