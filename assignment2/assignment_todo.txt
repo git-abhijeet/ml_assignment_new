@@ -1,0 +1,158 @@
+# 🏅 Tokyo 2021 Olympics Dataset Analysis - TODO List
+
+## 📋 Assignment Overview
+**Goal**: Explore the Tokyo 2021 Olympics dataset using Pandas and generate 10 valuable insights that reveal interesting patterns, trends, or comparisons.
+
+## 🗂️ Phase 1: Setup & Data Inspection
+
+- [x] **1.1** Create Jupyter Notebook for the assignment
+- [x] **1.2** Install required libraries
+    ```python
+    # Import necessary libraries
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import openpyxl
+    ```
+
+- [ ] **1.3** Load and inspect all datasets
+    - [ ] Load `Athletes.xlsx` (11,085 rows × 3 columns: Name, NOC, Discipline)
+    - [ ] Load `Medals.xlsx` (93 rows × 7 columns: Rank, Team/NOC, Gold, Silver, Bronze, Total, Rank by Total)
+    - [ ] Load `EntriesGender.xlsx` (46 rows × 4 columns: Discipline, Female, Male, Total)
+    - [ ] Load `Teams.xlsx` (743 rows × 4 columns: Name, Discipline, NOC, Event)
+    - [ ] Load `Coaches.xlsx` (394 rows × 4 columns: Name, NOC, Discipline, Event)
+
+- [ ] **1.4** Explore data structure
+    - [ ] Check shape, columns, and data types for each dataset
+    - [ ] Display first 5 rows of each dataset
+    - [ ] Check for missing values in each dataset
+    - [ ] Identify unique values in key columns (NOC, Discipline)
+
+## 🛠️ Phase 2: Data Cleaning & Preparation
+
+- [ ] **2.1** Standardize NOC names across datasets
+    - [ ] Compare NOC values between Athletes.xlsx and Medals.xlsx
+    - [ ] Create mapping for inconsistent country names (e.g., "United States of America" vs "USA")
+    - [ ] Apply standardization across all datasets
+
+- [ ] **2.2** Handle missing values
+    - [ ] Analyze missing values in Coaches.xlsx (Event column)
+    - [ ] Decide on strategy for handling NaN values
+    - [ ] Clean and standardize data types
+
+- [ ] **2.3** Create merged datasets for analysis
+    - [ ] Merge Athletes + Medals on NOC (left join) for country-level medal info
+    - [ ] Merge Athletes + EntriesGender on Discipline for gender participation
+    - [ ] Merge Teams + Medals on NOC for team performance analysis
+    - [ ] Create continent mapping for regional analysis
+
+- [ ] **2.4** Data validation
+    - [ ] Check for duplicate entries
+    - [ ] Validate merge results
+    - [ ] Ensure data consistency across merged datasets
+
+## 📊 Phase 3: Ten Insights Analysis
+
+### For each insight, include:
+1. **Clear question** you're trying to answer
+2. **Pandas code** with proper operations
+3. **Output** (tables/aggregates)
+4. **Visualization** (matplotlib/seaborn)
+5. **Brief explanation** of findings
+
+- [ ] **Insight 1: Medal Distribution by Country**
+    - [ ] Question: Which countries won the most medals and what's the distribution?
+    - [ ] Code: Group by country, aggregate medal counts, create rankings
+    - [ ] Visualization: Bar chart of top 15 countries
+    - [ ] Analysis: Medal concentration, dominant countries
+
+- [ ] **Insight 2: Gender Participation & Medal Trends**
+    - [ ] Question: How does gender participation vary across sports and relate to medal performance?
+    - [ ] Code: Analyze gender ratios by discipline, correlate with medal success
+    - [ ] Visualization: Gender ratio heatmap, participation vs medals scatter plot
+    - [ ] Analysis: Gender equality patterns, performance correlations
+
+- [ ] **Insight 3: Sports with Highest Competition Levels**
+    - [ ] Question: Which sports had the most athletes and highest participation?
+    - [ ] Code: Count athletes by discipline, analyze participation density
+    - [ ] Visualization: Horizontal bar chart of athlete counts by sport
+    - [ ] Analysis: Most competitive sports, participation patterns
+
+- [ ] **Insight 4: Continental/Regional Performance Comparison**
+    - [ ] Question: How do different continents perform in terms of medal counts?
+    - [ ] Code: Create continent mapping, aggregate medals by region
+    - [ ] Visualization: Pie chart of medals by continent, regional comparison bars
+    - [ ] Analysis: Regional dominance, geographic performance patterns
+
+- [ ] **Insight 5: Team vs Individual Sports Medal Analysis**
+    - [ ] Question: Do team sports or individual sports contribute more to medal tallies?
+    - [ ] Code: Classify sports as team/individual, compare medal distributions
+    - [ ] Visualization: Stacked bar chart comparing team vs individual medals
+    - [ ] Analysis: Sport type effectiveness, medal concentration
+
+- [ ] **Insight 6: Coaching Support vs Performance**
+    - [ ] Question: Is there a correlation between number of coaches and medal performance?
+    - [ ] Code: Count coaches by NOC, correlate with medal counts
+    - [ ] Visualization: Scatter plot of coaches vs medals
+    - [ ] Analysis: Coaching investment impact on performance
+
+- [ ] **Insight 7: Sports Diversity by Country**
+    - [ ] Question: Which countries have the most diverse sports participation?
+    - [ ] Code: Count unique disciplines per NOC, analyze diversity
+    - [ ] Visualization: Bar chart of sports diversity, country comparison
+    - [ ] Analysis: Specialization vs diversification strategies
+
+- [ ] **Insight 8: Gender-Specific Sports Analysis**
+    - [ ] Question: Which sports are gender-exclusive and how does this affect participation?
+    - [ ] Code: Identify male-only/female-only sports, analyze participation
+    - [ ] Visualization: Category breakdown of gender-specific sports
+    - [ ] Analysis: Gender inclusivity trends, sport accessibility
+
+- [ ] **Insight 9: Medal Efficiency Analysis**
+    - [ ] Question: Which countries are most efficient at converting athlete participation into medals?
+    - [ ] Code: Calculate medals per athlete ratio by country
+    - [ ] Visualization: Efficiency scatter plot, country rankings
+    - [ ] Analysis: Performance optimization, training effectiveness
+
+- [ ] **Insight 10: Discipline-Level Medal Distribution**
+    - [ ] Question: How are medals distributed across different sports disciplines?
+    - [ ] Code: Aggregate medals by discipline, analyze distribution patterns
+    - [ ] Visualization: Treemap or pie chart of medals by discipline
+    - [ ] Analysis: Sport popularity, medal concentration patterns
+
+## 📝 Phase 4: Final Deliverables
+
+- [ ] **4.1** Code organization and documentation
+    - [ ] Add clear markdown explanations for each insight
+    - [ ] Include proper code comments
+    - [ ] Ensure reproducible code with proper imports
+
+- [ ] **4.2** Visualization enhancement
+    - [ ] Create publication-quality plots with proper titles, labels, and colors
+    - [ ] Use consistent styling across all visualizations
+    - [ ] Add appropriate legends and annotations
+
+- [ ] **4.3** Summary and conclusions
+    - [ ] Write executive summary of key findings
+    - [ ] Highlight most interesting/surprising insights
+    - [ ] Discuss limitations and potential future analysis
+
+- [ ] **4.4** Final review and submission
+    - [ ] Test all code cells run without errors
+    - [ ] Check that all visualizations display correctly
+    - [ ] Verify all 10 insights are complete with question, code, output, and explanation
+    - [ ] Export notebook as .ipynb file for submission
+
+## 🎯 Success Criteria Checklist
+
+- [ ] **Creativity**: Insights go beyond basic descriptive statistics
+- [ ] **Pandas Operations**: Proper use of groupby, filtering, merging, aggregations
+- [ ] **Code Quality**: Clean, well-commented, reproducible code
+- [ ] **Visualizations**: Clear, informative plots that support insights
+- [ ] **Analysis Depth**: Each insight includes meaningful interpretation
+- [ ] **Documentation**: Clear explanations and markdown documentation
+
+---
+
+**Note**: This assignment focuses on existing data analysis since the dataset doesn't contain individual athlete physical attributes (height, weight, age). Adjust insights accordingly based on available data.
