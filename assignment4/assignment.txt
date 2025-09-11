@@ -1,0 +1,108 @@
+Q: 1
+Comparing OLS, Ridge, and Lasso Regression
+Problem Statement
+You are working as a data scientist for a real-estate analytics firm. Your task is to build predictive models to estimate house prices based on various features (such as number of rooms, square footage, neighborhood, year built, etc.).
+
+The firm wants to understand the effect of regularization on regression models. You need to implement and compare:
+
+Ordinary Least Squares (OLS) – basic linear regression
+Ridge Regression – L2 regularization
+Lasso Regression – L1 regularization
+Dataset
+Use the Ames Housing Dataset from Kaggle:
+
+🔗 Ames Housing Dataset
+
+This dataset has 2,930 house sales in Ames, Iowa, with 80+ explanatory variables describing property details.
+
+Objectives
+Preprocess the dataset (handle missing values, categorical encoding, normalization).
+Train three models: OLS, Ridge, and Lasso regression.
+Compare their performance using R², RMSE, and MAE.
+Analyze feature importance/coefficients:
+OLS may use all features.
+Ridge shrinks coefficients but keeps most.
+Lasso may drive some coefficients to zero (feature selection).
+Deliverables
+Each student/team must submit:
+
+Jupyter Notebook (.ipynb) containing:
+Data preprocessing steps (with explanations)
+Model training for OLS, Ridge, and Lasso
+Performance evaluation (R², RMSE, MAE)
+Coefficient/feature importance comparison
+Plots/visualizations (error distribution, actual vs predicted, coefficient shrinkage)
+Report (.pdf or .docx) summarizing:
+Approach taken for preprocessing and modeling
+Comparison of OLS, Ridge, and Lasso (accuracy + interpretability)
+Key insights (e.g., which model generalizes best, how regularization affects results)
+Conclusion on which model you would recommend to the firm and why
+Code files (.py, optional) if you modularize your notebook.
+Submission Details
+Submission format: Upload a single .zip file containing:
+Jupyter Notebook
+Report
+Any additional .py files
+
+
+
+
+
+
+# To-Do List for ML Assignment: Comparing OLS, Ridge, and Lasso Regression
+
+- [x] **1. Dataset Acquisition**
+  - [x] Download the Ames Housing Dataset from Kaggle.
+
+- [x] **2. Data Exploration and Understanding**
+  - [x] Load dataset into Jupyter Notebook.
+  - [x] Understand the dataset features and target variable.
+  - [x] Check dataset shape, basic statistics, and data types.
+  - [x] Identify missing values and their patterns.
+  - [x] Identify categorical and numerical features.
+  
+- [x] **3. Data Preprocessing**
+  - [x] Handle missing values (imputation or removal).
+  - [x] Encode categorical variables (One-hot encoding or label encoding).
+  - [x] Normalize/scale numerical features.
+  - [x] Split dataset into training and testing sets (e.g., 80/20 split).
+
+- [x] **4. Model Implementation**
+  - [x] Implement Ordinary Least Squares (OLS) regression.
+  - [x] Implement Ridge Regression (L2 regularization).
+  - [x] Implement Lasso Regression (L1 regularization).
+  
+- [x] **5. Model Training**
+  - [x] Train OLS model on training data.
+  - [x] Train Ridge model on training data (choose suitable alpha hyperparameter).
+  - [x] Train Lasso model on training data (choose suitable alpha hyperparameter).
+  
+- [x] **6. Model Evaluation**
+  - [x] Predict house prices on test data using all three models.
+  - [x] Calculate performance metrics for each model:
+    - [x] R² (Coefficient of Determination)
+    - [x] RMSE (Root Mean Squared Error)
+    - [x] MAE (Mean Absolute Error)
+
+- [x] **7. Feature Importance Analysis**
+  - [x] Extract and compare coefficients from OLS, Ridge, and Lasso.
+  - [x] Identify feature shrinkage effect (coefficients magnitude).
+  - [x] Identify feature selection effects (which features have zeroed coefficients in Lasso).
+  
+- [x] **8. Visualization**
+  - [x] Plot error distribution for each model.
+  - [x] Plot actual vs predicted values for all models.
+  - [x] Visualize coefficient shrinkage across OLS, Ridge, and Lasso.
+
+- [x] **9. Documentation and Reporting**
+  - [x] Document data preprocessing steps with explanations.
+  - [x] Document model building and training process.
+  - [x] Summarize model performance comparison.
+  - [x] Discuss insights from feature importance analysis.
+  - [x] Write conclusions recommending the most suitable model for the firm.
+  
+- [x] **10. Deliverable Preparation**
+  - [x] Finalize Jupyter Notebook (.ipynb) with all code, explanations, and visualizations.
+  - [x] Prepare a report (.pdf or .docx) summarizing approach, results, insights, and recommendations.
+  - [x] (Optional) Prepare additional .py files if code is modularized.
+  - [x] Archive all above files into a single .zip file for submission.
