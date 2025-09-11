@@ -1,0 +1,95 @@
+Q: 1
+Objective
+Build and evaluate a linear regression model to predict house prices using the California Housing dataset.
+
+Dataset
+Kaggle Dataset: California Housing Prices
+
+20,640 samples with 8 features
+Target: Median house value in hundreds of thousands of dollars
+Tasks
+Task 1: Data Exploration
+Load the dataset and examine its structure
+Check for missing values and outliers
+Create a correlation heatmap between features
+Generate scatter plots for key feature relationships
+Task 2: Data Preprocessing
+Handle missing values (if any)
+Split data into training (80%) and testing (20%) sets
+Apply feature scaling using StandardScaler
+Create polynomial features for at least one variable
+Task 3: Model Implementation
+Implement linear regression using scikit-learn
+Train the model on training data
+Make predictions on the test set
+Compare with a Ridge regression model (alpha=1.0)
+Task 4: Analysis & Insights
+Identify the most important features
+Discuss model limitations
+Suggest improvements for better performance
+Deliverables
+Jupyter notebook with complete analysis
+Brief report (1-2 pages) summarizing findings
+Model performance comparison table
+Submission Format: .ipynb file + PDF report
+
+
+
+
+# California Housing Linear Regression Assignment Checklist
+
+## ✅ Task 1: Data Exploration
+- ✅ Download the dataset from Kaggle and save as 'housing.csv'
+- ✅ Load the dataset into a pandas DataFrame
+- ✅ Display the first few rows using `df.head()`
+- ✅ Check dataset dimensions and column names
+- ✅ Use `df.info()` and `df.describe()` for overview
+- ✅ Check for missing values using `df.isnull().sum()`
+- ✅ Check data types and ensure numeric columns are properly formatted
+- ✅ Handle categorical variable (`ocean_proximity`) - check unique values and consider encoding
+- ✅ Visualize outliers with boxplots for key features
+- ✅ Generate a correlation matrix with `df.corr()`
+- ✅ Plot a heatmap of correlations with seaborn
+- ✅ Create scatter plots for important feature pairs (e.g., longitude vs price, population vs price)
+
+---
+
+## ✅ Task 2: Data Preprocessing
+- ✅ Impute or drop missing values if any are present
+- ✅ Select features (X) and target (y)
+- ✅ Handle categorical feature encoding (if including `ocean_proximity` in the model)
+- ✅ Consider feature selection based on correlation analysis
+- ✅ Split data into training (80%) and testing (20%) sets using `train_test_split`
+- ✅ Apply standard scaling with `StandardScaler` to features
+- ✅ Create polynomial features for at least one variable using `PolynomialFeatures`
+
+---
+
+## ✅ Task 3: Model Implementation
+- ✅ Import necessary modules from scikit-learn
+- ✅ Instantiate and train a LinearRegression model on training data
+- ✅ Make predictions on test data
+- ✅ Instantiate and train a RidgeRegression model (alpha=1.0)
+- ✅ Make predictions with Ridge on test data
+- ✅ Calculate metrics (MAE, MSE, RMSE, R²) for both models
+- ✅ Plot residuals to check model assumptions
+- ✅ Compare predictions vs actual values with scatter plots
+
+---
+
+## ✅ Task 4: Analysis & Insights
+- ✅ Investigate the most important features
+- ✅ Discuss model limitations
+- ✅ Analyze residuals for patterns (heteroscedasticity, normality)
+- ✅ Discuss the impact of the categorical variable `ocean_proximity`
+- ✅ Suggest improvements for better performance
+
+---
+
+## ⬜ Deliverables
+- ⬜ Complete the Jupyter notebook (.ipynb) with organized code, visualizations, and commentary
+- ⬜ Write a brief 1–2 page summary report (PDF) covering findings and model comparisons
+- ⬜ Include a markdown table comparing performance metrics of Linear vs Ridge regression
+
+---
+
