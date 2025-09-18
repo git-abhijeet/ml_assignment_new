@@ -1,0 +1,149 @@
+Q: 1
+K-Means Clustering
+Problem Overview
+You are the data scientist for a large shopping mall chain that has been collecting customer data through membership cards and transaction records. The marketing team wants to develop targeted marketing campaigns and personalized customer experiences, but they need to understand their customer base better. Your task is to use K-means clustering to segment customers into distinct groups based on their characteristics and spending behaviors.
+
+Business Context
+Shopping malls face increasing competition from online retailers and need to optimize their marketing strategies to retain customers and increase revenue. Understanding customer segments allows for:
+
+Targeted marketing campaigns
+Personalized promotional offers
+Optimized store layouts and product placements
+Improved customer retention strategies
+Better resource allocation for marketing budgets
+Dataset Information
+Dataset Link: Mall Customer Segmentation Data - Kaggle
+
+Dataset Description
+The dataset contains 200 customer records with 5 features each:
+
+CustomerID: Unique identifier for each customer (1-200)
+Gender: Customer's gender (Male/Female)
+Age: Customer's age in years (range: approximately 18-70)
+Annual Income (k$): Customer's annual income in thousands of dollars
+Spending Score (1-100): A proprietary score assigned based on customer behavior and spending patterns, where higher scores indicate greater propensity to spend
+Problem Statement
+Primary Objective: Apply K-means clustering algorithm to segment mall customers into meaningful groups based on their demographic and spending characteristics.
+
+Specific Tasks
+Data Exploration and Preprocessing
+
+Perform exploratory data analysis (EDA) to understand data distributions
+Handle categorical variables (Gender encoding)
+Standardize numerical features for clustering
+Analyze correlations between features
+Optimal Cluster Selection
+
+Use the Elbow Method to determine optimal number of clusters (k)
+Apply Silhouette Analysis for cluster validation
+Consider business interpretability when selecting k
+K-Means Implementation
+
+Implement K-means clustering with the optimal k value
+Handle feature scaling appropriately
+Ensure reproducible results with random state
+Cluster Analysis and Interpretation
+
+Analyze cluster characteristics and profiles
+Create meaningful business interpretations for each segment
+Visualize clusters in 2D and 3D space
+Calculate cluster centroids and interpret their business meaning
+Business Recommendations
+
+Provide actionable marketing strategies for each customer segment
+Suggest targeted promotional campaigns
+Recommend product placement and store layout optimizations
+Expected Deliverables
+Technical Implementation
+
+Complete Python code for K-means clustering pipeline
+Proper data preprocessing and feature engineering
+Cluster validation metrics and visualizations
+Business Insights
+
+Clear customer segment profiles with business interpretations
+Marketing recommendations for each segment
+Visual presentations of clustering results
+Model Evaluation
+
+Cluster quality metrics (Silhouette Score, Within-Cluster Sum of Squares)
+Comparison of different k values
+Justification for chosen number of clusters
+
+\n\n==== K-Means Clustering Assignment — Actionable TODO Checklist ====
+
+Legend: [ ] not started, [~] in progress, [x] done
+
+Planning & Setup
+- [ ] Define business goal alignment: segmentation use-cases and KPIs
+- [ ] Pin Python version and create `requirements.txt`
+- [ ] Set random seed for reproducibility (`random_state`)
+- [ ] Load data from `Mall_Customers.csv`
+
+EDA & Data Understanding
+- [ ] Inspect shape, dtypes, missing values, duplicates
+- [ ] Summarize stats for numeric features (Age, Income, Score)
+- [ ] Plot distributions (hist/kde) for numeric features
+- [ ] Analyze `Gender` balance and encode plan
+- [ ] Pairwise scatterplots and correlation heatmap
+- [ ] Identify outliers and scaling implications
+
+Preprocessing
+- [ ] Encode `Gender` (e.g., one-hot or binary mapping)
+- [ ] Split features to use for clustering (document rationale)
+- [ ] Standardize numeric features with `StandardScaler`
+- [ ] Persist scaler to reuse on new data
+
+Optimal K Selection
+- [ ] Compute WCSS across k range (e.g., 2–10) — Elbow
+- [ ] Plot Elbow curve and note candidate ks
+- [ ] Compute Silhouette Score across same k range
+- [ ] Optionally compute Davies–Bouldin/Calinski–Harabasz
+- [ ] Choose k balancing metric and business interpretability
+
+K-Means Implementation
+- [ ] Fit `KMeans(n_clusters=k, init="k-means++", n_init="auto", random_state=42)`
+- [ ] Save model parameters and centroids
+- [ ] Assign cluster labels to customers
+- [ ] Inverse-transform to original units for summaries
+
+Cluster Validation
+- [ ] Report final Silhouette Score for chosen k
+- [ ] Compare to adjacent ks (k-1, k+1)
+- [ ] Inspect cluster sizes and inertia
+
+Visualization
+- [ ] 2D scatterplots with clusters (selected features)
+- [ ] PCA to 2 components; plot clusters + centroids
+- [ ] 3D PCA scatter (optional)
+- [ ] Box/violin plots per feature by cluster
+
+Cluster Profiling & Insights
+- [ ] Compute per-cluster means/medians for all features
+- [ ] Describe segment personas in business terms
+- [ ] Interpret centroids in original feature scales
+- [ ] Tie segments to potential value/KPIs
+
+Business Recommendations
+- [ ] Targeted offers per segment (channels, messaging)
+- [ ] Product placement and store layout guidance
+- [ ] Retention/loyalty strategies per segment
+- [ ] Measurement plan: A/B test or uplift metrics
+
+Deliverables Packaging
+- [ ] Clean, modular Python notebook/script pipeline
+- [ ] Include preprocessing, modeling, validation, visuals
+- [ ] Summarize chosen k with justification
+- [ ] Export segment profiles table and plots
+- [ ] Document limitations and next steps
+
+Reproducibility & QA
+- [ ] Seeded runs yield stable clusters
+- [ ] Code cells run top-to-bottom without errors
+- [ ] README or notebook intro with instructions
+- [ ] Optional: Save model and scaler artifacts
+
+Stretch (Optional)
+- [ ] Try alternative feature sets (e.g., Age+Income, Income+Score)
+- [ ] Compare with GMM or Hierarchical clustering
+- [ ] Evaluate stability via bootstrapping or multiple seeds
